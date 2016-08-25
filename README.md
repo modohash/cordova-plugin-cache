@@ -13,8 +13,8 @@ Installation
 You may use phonegap CLI as follows:
 
 <pre>
-➜ phonegap local plugin add https://github.com/moderna/cordova-plugin-cache.git
-[phonegap] adding the plugin: https://github.com/moderna/cordova-plugin-cache.git
+➜ phonegap local plugin add https://github.com/modohash/cordova-plugin-cache.git
+[phonegap] adding the plugin: https://github.com/modohash/cordova-plugin-cache.git
 [phonegap] successfully added the plugin
 </pre>
 
