@@ -1,7 +1,7 @@
 Cache
 =============
 
-This is a WebView cache plugin for Cordova 6.1.1+ supporting Android (>=4.1) and iOS(>=6.0).
+This is a WebView cache plugin for Cordova 6.1.1+ supporting Android (>=4.1) and iOS(>=9.0).
 It allows to clear the cordova webview cache.
 
 There is one method:
