@@ -20,6 +20,7 @@
 
 
 #import "Cache.h"
+#import <WebKit/WebKit.h>
 
 @implementation Cache
 
@@ -38,6 +39,22 @@
 
         // clear cache
         [[NSURLCache sharedURLCache] removeAllCachedResponses];
+        
+        NSSet *websiteDataTypes = [NSSet setWithArray:@[
+	        WKWebsiteDataTypeDiskCache,
+	        //WKWebsiteDataTypeOfflineWebApplicationCache,
+	        WKWebsiteDataTypeMemoryCache,
+	        //WKWebsiteDataTypeLocalStorage,
+	        //WKWebsiteDataTypeCookies,
+	        //WKWebsiteDataTypeSessionStorage,
+	        //WKWebsiteDataTypeIndexedDBDatabases,
+	        //WKWebsiteDataTypeWebSQLDatabases
+        ]];
+        
+        NSDate *dateFrom = [NSDate dateWithTimeIntervalSince1970:0];
+        [[WKWebsiteDataStore defaultDataStore] removeDataOfTypes:websiteDataTypes
+                                                   modifiedSince:dateFrom
+                                               completionHandler:^{}];
 
     }];
 
